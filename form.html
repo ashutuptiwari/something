@@ -3,6 +3,39 @@
     <head>
         <title>Form</title>
         <script src="form.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+    emailjs.init("qEXEJx4R0VjzPPu8S");
+
+    const form = document.getElementById("forms");
+
+    form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var where = document.getElementById("where").value;
+    var when = document.getElementById("when").value;
+    var idea = document.getElementById("idea").value;
+    var thought = document.getElementById("thought").value;
+    var emailParams = {
+      name: name,
+      where: where,
+      when: when,
+      idea: idea,
+      thought: thought
+    };
+
+      emailjs.send("service_s2vn9rl", "template_v0qcqkw", data)
+        .then(function(response) {
+          console.log("SUCCESS!", response.status, response.text);
+        }, function(error) {
+          console.log("FAILED...", error);
+        });
+
+      form.reset();
+    });
+  });
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
         <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
         <link rel="stylesheet" href="form.css" type="text/css">
