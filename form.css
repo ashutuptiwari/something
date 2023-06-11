@@ -32,6 +32,31 @@ textarea,input
     width:500px;
     margin:20px 20px 0px 20px;
     height:50px;
+    text-align:center;
 }
+textarea:hover,input:hover
+{
+    border:2px solid black;
+}
+
+#submit
+{
+    transition-duration: 1s;
+    width:80px;
+    height:80px;
+    background-color:black;
+    color:white;
+    font-weight:bolder;
+    border-radius: 50%;
+}
+#submit:hover
+{
+    color:black;
+    background-color:white;
+    border:2px solid white;
+    transition-duration: 1s;
+}
+
+
 
 
