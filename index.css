@@ -1,0 +1,39 @@
+#gifContainer
+{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:50px;
+}
+#butContainer {
+  text-align: center;
+}
+button
+{
+    width:100px;
+    height:30px;
+    border:3px solid black;
+    font-weight:bold;
+    font-size:20px;
+}
+#no
+{
+    background-color:red;
+}
+#yes
+{
+    background-color:#40EF0E;
+}
+p
+{
+    text-align:center;
+    font-family:cursive;
+    font-size:30px;
+}
+body
+{
+    background-image:url(davies-designs-studio-_UCVrH-ZIIg-unsplash.jpg);
+    background-repeat:;
+    background-position:center;
+    background-size:cover;
+}
