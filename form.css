@@ -33,6 +33,7 @@ textarea,input
     margin:20px 20px 0px 20px;
     height:50px;
     text-align:center;
+    box-sizing: border-box;
 }
 textarea:hover,input:hover
 {
