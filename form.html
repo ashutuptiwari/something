@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Form</title>
         <script src="form.js"></script>
         <script>
@@ -42,30 +44,35 @@
     </head>
     <body>
         <div id="confetti-container">
-            <h1>Questions i have for u  </h1>
-            <div id="form">
+            <h1>Questions i have for u</h1>
+            <div class="form-card">
                 <form id="forms">
-                    <label for="name">Name:</label>
-                    <input id="name" placeholder="name(i prolly know it but just to be sure)">
-                    <br>
-                    <label for="where">Where:</label>
-                    <input id="where" placeholder="preferred place for a date">
-                    <br>
-                    <label for="when">When:</label>
-                    <input id="when" placeholder="preferred timings">
-                    <br>
-                    <div id="formfield">
-                    <label for="idea">Ideas:</label>
-                    <textarea id="idea" placeholder="Your idea of a perfect date"></textarea>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" placeholder="i prolly know it but just to be sure">
                     </div>
-                    <div id="formfield">
-                    <label for="thought">Thoughts:</label>
-                    <textarea id="thought" placeholder="What do you think about me?"></textarea>
+                    <div class="form-group">
+                        <label for="where">Where</label>
+                        <input id="where" placeholder="preferred place for a date">
                     </div>
-                    <input type="submit" id="submit" name="submit" value ="submit" />
+                    <div class="form-group">
+                        <label for="when">When</label>
+                        <input id="when" placeholder="preferred timings">
+                    </div>
+                    <div class="form-group">
+                        <label for="idea">Ideas</label>
+                        <textarea id="idea" placeholder="your idea of a perfect date"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="thought">Thoughts</label>
+                        <textarea id="thought" placeholder="what do you think about me?"></textarea>
+                    </div>
+                    <div class="form-group submit-group">
+                        <button type="submit" id="submit">Submit</button>
+                    </div>
                 </form>
             </div>
-        </div>    
+        </div>
         
     </body>
 </html>

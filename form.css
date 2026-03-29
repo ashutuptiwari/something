@@ -1,63 +1,152 @@
-body
-{
-    background-image:url('2075370.jpg');
-    background-repeat:;
-    background-size:cover;
-    height:100%;
-    font-family: SF Atarian System;
-}
-h1
-{
-    color:Black;
-    font-size:50px;
-    text-align:center;
-}
-#form
-{
-    text-align:center;
-}
-label
-{
-    font-size:20px;
-}
-
-#formfield
-{
-    display:flex;
-    align-items:center;
-    justify-content: center;
-}
-textarea,input
-{
-    width:500px;
-    margin:20px 20px 0px 20px;
-    height:50px;
-    text-align:center;
+* {
     box-sizing: border-box;
-}
-textarea:hover,input:hover
-{
-    border:2px solid black;
+    margin: 0;
+    padding: 0;
 }
 
-#submit
-{
-    transition-duration: 1s;
-    width:80px;
-    height:80px;
-    background-color:black;
-    color:white;
-    font-weight:bolder;
-    border-radius: 50%;
-}
-#submit:hover
-{
-    color:black;
-    background-color:white;
-    border:2px solid white;
-    transition-duration: 1s;
+body {
+    background-image: url('2075370.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
 }
 
+/* ---------- Page wrapper ---------- */
+#confetti-container {
+    width: 100%;
+    max-width: 520px;
+}
 
+/* ---------- Heading ---------- */
+h1 {
+    color: #1a1a1a;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+    letter-spacing: -0.3px;
+}
 
+/* ---------- Card ---------- */
+.form-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 36px 32px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
 
+/* ---------- Form groups ---------- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ---------- Inputs & textareas ---------- */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #222;
+    background: #f7f7f8;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #555;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+    background: #fff;
+}
+
+.form-group textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+/* ---------- Submit button ---------- */
+.submit-group {
+    text-align: center;
+    margin-top: 28px;
+    margin-bottom: 0;
+}
+
+#submit {
+    display: inline-block;
+    padding: 14px 44px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    background: #1a1a1a;
+    border: 2px solid #1a1a1a;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#submit:hover {
+    background: transparent;
+    color: #1a1a1a;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 560px) {
+    body {
+        padding: 24px 12px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+
+    .form-card {
+        padding: 24px 18px;
+        border-radius: 12px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    #submit {
+        padding: 12px 36px;
+        font-size: 14px;
+    }
+}
